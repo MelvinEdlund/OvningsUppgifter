@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variabler_Loopar", "Variabler_Loopar\Variabler_Loopar.csproj", "{71E3C2BF-4AF8-425F-99C1-6F0B590FB309}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algoritmer", "Algoritmer\Algoritmer.csproj", "{CD6327E9-8793-4A38-A97B-90ED61F0D1B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funktioner", "Funktioner\Funktioner.csproj", "{E3AD4748-8765-45DA-B7D7-EC5C06F6E93B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic_OOP", "Basic_OOP\Basic_OOP.csproj", "{7606059D-C1E4-4378-B835-3BE0006E6402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E3AD4748-8765-45DA-B7D7-EC5C06F6E93B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3AD4748-8765-45DA-B7D7-EC5C06F6E93B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3AD4748-8765-45DA-B7D7-EC5C06F6E93B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7606059D-C1E4-4378-B835-3BE0006E6402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7606059D-C1E4-4378-B835-3BE0006E6402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7606059D-C1E4-4378-B835-3BE0006E6402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7606059D-C1E4-4378-B835-3BE0006E6402}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
