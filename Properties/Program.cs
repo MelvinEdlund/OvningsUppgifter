@@ -103,7 +103,7 @@ namespace Properties
             double totalDistance = 10000; 
             bool raceOver = false;
             Car winner = null;
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 29; i++)
             {
                 Console.WriteLine();
             }

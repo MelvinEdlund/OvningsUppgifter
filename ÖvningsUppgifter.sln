@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic_OOP", "Basic_OOP\Basi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Properties", "Properties\Properties.csproj", "{128BDD18-DB00-4DCD-9A13-517646D368DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arv", "Arv\Arv.csproj", "{A8042316-7998-4891-B207-37F01BDC4118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wordle", "Wordle\Wordle.csproj", "{4C43586A-B42E-4543-8A7B-D5FDD2A854BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{128BDD18-DB00-4DCD-9A13-517646D368DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{128BDD18-DB00-4DCD-9A13-517646D368DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{128BDD18-DB00-4DCD-9A13-517646D368DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8042316-7998-4891-B207-37F01BDC4118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8042316-7998-4891-B207-37F01BDC4118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8042316-7998-4891-B207-37F01BDC4118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8042316-7998-4891-B207-37F01BDC4118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C43586A-B42E-4543-8A7B-D5FDD2A854BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C43586A-B42E-4543-8A7B-D5FDD2A854BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C43586A-B42E-4543-8A7B-D5FDD2A854BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C43586A-B42E-4543-8A7B-D5FDD2A854BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
