@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wordle", "Wordle\Wordle.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegat", "Delegat\Delegat.csproj", "{0CC048F4-F8CF-4C90-B29E-FF56A6E87AEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{05F13141-DE04-4EE4-A456-BA576F4EC2F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{0CC048F4-F8CF-4C90-B29E-FF56A6E87AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CC048F4-F8CF-4C90-B29E-FF56A6E87AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CC048F4-F8CF-4C90-B29E-FF56A6E87AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F13141-DE04-4EE4-A456-BA576F4EC2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F13141-DE04-4EE4-A456-BA576F4EC2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F13141-DE04-4EE4-A456-BA576F4EC2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F13141-DE04-4EE4-A456-BA576F4EC2F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
