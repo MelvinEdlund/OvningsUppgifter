@@ -406,7 +406,7 @@ while (!quitGame)
 
         Move(newX, newY);
 
-        Thread.Sleep(200); 
+        Thread.Sleep(175); 
     }
 
     Console.Clear();
