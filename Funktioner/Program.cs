@@ -285,7 +285,10 @@
 //DrawBox(7, 4);
 
 
+
+
 // 13.
+
 //static void DrawBox(int width, int height)
 //{
 //    for (int i = 0; i < height; i++)
@@ -334,51 +337,152 @@
 //}
 
 
-// 15.
+// 14
+using System;
+using System.Collections.Generic;
+using System.Threading;
 
-static void DrawBox(int width, int height)
+int width = 30;
+int height = 15;
+Random rnd = new Random();
+Console.CursorVisible = false;
+
+bool quitGame = false;
+
+while (!quitGame)
 {
-    for (int i = 0; i < height; i++)
+    // --- initiera spelet ---
+    Console.Clear();
+    char[,] box = DrawBox(height, width);
+    List<(int x, int y)> snake = new List<(int, int)>();
+    int snakeLength = 1;
+
+    PrintBox(box);
+
+    // starta ormen i mitten
+    int x = width / 2;
+    int y = height / 2;
+    snake.Add((x, y));
+    box[y, x] = '@';
+    Console.SetCursorPosition(x, y);
+    Console.Write('@');
+
+    // första äpplet
+    PlaceApple();
+
+    // starta riktning (höger)
+    int dx = 1;
+    int dy = 0;
+
+    bool running = true;
+
+    while (running)
     {
-        for (int j = 0; j < width; j++)
+        // kolla om en tangent är tryckt
+        if (Console.KeyAvailable)
         {
-            if (i == 0 || i == height - 1 || j == 0 || j == width - 1)
-            {
-                Console.Write("#");
-            }
-            else Console.Write("-");
+            var key = Console.ReadKey(true).Key;
+            if (key == ConsoleKey.RightArrow && dx != -1) { dx = 1; dy = 0; }
+            if (key == ConsoleKey.LeftArrow && dx != 1) { dx = -1; dy = 0; }
+            if (key == ConsoleKey.UpArrow && dy != 1) { dx = 0; dy = -1; }
+            if (key == ConsoleKey.DownArrow && dy != -1) { dx = 0; dy = 1; }
+        }
+
+        int newX = snake[0].x + dx;
+        int newY = snake[0].y + dy;
+
+        // kolla väggar eller självkrock
+        if (box[newY, newX] == '#' || box[newY, newX] == '@')
+        {
+            running = false;
+            break;
+        }
+
+        if (box[newY, newX] == 'ä')
+        {
+            snakeLength++;
+            PlaceApple();
+        }
+
+        Move(newX, newY);
+
+        Thread.Sleep(200); 
+    }
+
+    Console.Clear();
+    Console.WriteLine("GAME OVER!");
+    Console.WriteLine("Tryck 'R' för att starta om eller 'ESC' för att avsluta.");
+
+    while (true)
+    {
+        var checkKey = Console.ReadKey(true).Key;
+        if (checkKey == ConsoleKey.Escape) { quitGame = true; break; }
+        if (checkKey == ConsoleKey.R) { break; }
+    }
+
+    void PlaceApple()
+    {
+        int rx, ry;
+        do
+        {
+            rx = rnd.Next(1, width - 1);
+            ry = rnd.Next(1, height - 1);
+        } while (box[ry, rx] != ' ');
+
+        box[ry, rx] = 'ä';
+        Console.SetCursorPosition(rx, ry);
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.Write('ä');
+        Console.ResetColor();
+    }
+
+    void Move(int newX, int newY)
+    {
+        // lägg in nytt huvud
+        snake.Insert(0, (newX, newY));
+        box[newY, newX] = '@';
+        Console.SetCursorPosition(newX, newY);
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.Write('@');
+        Console.ResetColor();
+
+        // om ormen är för lång -> ta bort svansen
+        if (snake.Count > snakeLength)
+        {
+            var tail = snake[^1];
+            box[tail.y, tail.x] = ' ';
+            Console.SetCursorPosition(tail.x, tail.y);
+            Console.Write(' ');
+            snake.RemoveAt(snake.Count - 1);
+        }
+    }
+}
+
+static char[,] DrawBox(int height, int width)
+{
+    char[,] display = new char[height, width];
+
+    for (int y = 0; y < height; y++)
+    {
+        for (int x = 0; x < width; x++)
+        {
+            if (y == 0 || y == height - 1 || x == 0 || x == width - 1)
+                display[y, x] = '#';
+            else
+                display[y, x] = ' ';
+        }
+    }
+    return display;
+}
+
+static void PrintBox(char[,] display)
+{
+    for (int y = 0; y < display.GetLength(0); y++)
+    {
+        for (int x = 0; x < display.GetLength(1); x++)
+        {
+            Console.Write(display[y, x]);
         }
         Console.WriteLine();
     }
-
-}
-
-
-int width = 15;
-int height = 8;
-int x = width / 2;
-int y = height / 2;
-
-DrawBox(width, height);
-
-void Move(int newX, int newY)
-{
-    Console.SetCursorPosition(x, y);
-    Console.Write('-');
-    x = newX;
-    y = newY;
-    Console.SetCursorPosition(x, y);
-    Console.Write('@');
-}
-
-Console.SetCursorPosition(x, y);
-Console.Write('@');
-
-while (true)
-{
-    ConsoleKeyInfo key = Console.ReadKey(true);
-    if (key.Key == ConsoleKey.RightArrow && x < width - 2) Move(x + 1, y);
-    if (key.Key == ConsoleKey.LeftArrow && x > 1) Move(x - 1, y);
-    if (key.Key == ConsoleKey.UpArrow && y > 1) Move(x, y - 1);
-    if (key.Key == ConsoleKey.DownArrow && y < height - 2) Move(x, y + 1);
 }
