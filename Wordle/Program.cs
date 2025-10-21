@@ -5,7 +5,7 @@ class Program
 {
     static void Main()
     {
-        const string secret = "penis"; // målordet
+        const string secret = "fiska"; // målordet
         const int maxAttempts = 6;
         int attempts = 0;
         bool won = false;
