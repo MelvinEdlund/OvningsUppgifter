@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         FontSize="25"
         Title="Uppgift_6" Height="450" Width="800">
-    <Grid ShowGridLines="False">
+    <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>

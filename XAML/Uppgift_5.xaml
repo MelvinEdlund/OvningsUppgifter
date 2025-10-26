@@ -10,15 +10,15 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
                     Orientation="Vertical"
-                    Width="300" Height="253">
+                    Width="300" Height="250">
             <Label>FirstName:</Label>
-            <TextBox>
-                
-            </TextBox>
+            <TextBox/>
+            
             <Label>LastName:</Label>
             <TextBox></TextBox>
+            
             <Button Margin="40"
-                    HorizontalAlignment="Center" Width="125">OK</Button>
+                    Width="120">OK</Button>
         </StackPanel>
     </Grid>
 </Window>

@@ -11,33 +11,48 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-
-
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="0"
-               VerticalAlignment="Top" HorizontalAlignment="Right"
-               Margin="0,61,212,0" Width="113" Height="39">FirstName:</Label>
-        <TextBox Grid.Row="0" Grid.Column="0"
-                 Margin="75,100,100,80"/>
+        <StackPanel Grid.Column="0"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Orientation="Vertical"
+            Width="225"
+            Margin="75">
+            <Label>FirstName:</Label>
+            <TextBox/>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            Orientation="Vertical"
+            Width="225"
+            Margin="75">
+            <Label Content="Email:"/>
+            <TextBox/>
+        </StackPanel>
 
-        <Label Grid.Row="0" Grid.Column="1" 
-               VerticalAlignment="Top" HorizontalAlignment="Right"
-               Margin="0,63,75,0" Width="225">Lastname:</Label>
-        <TextBox Grid.Row="0" 
-                 Margin="100,100,73,80" Grid.Column="1"/>
+        <StackPanel Grid.Column="1"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Orientation="Vertical"
+            Width="225"
+            Margin="75">
+            <Label>LastName:</Label>
+            <TextBox/>
+        </StackPanel>
 
-        <Label Grid.Row="1" Grid.Column="0" 
-               VerticalAlignment="Top" HorizontalAlignment="Right"
-               Margin="0,63,212,0" Width="113">Email:</Label>
-        <TextBox Grid.Column="0" 
-                 Margin="75,100,100,80" Grid.Row="1"/>
 
-        <Button VerticalContentAlignment="Center" Content="Cancel" Margin="80,100,220,80" Grid.Column="1" Grid.Row="1"/>
-        <Button VerticalContentAlignment="Center" Content="OK" Margin="220,100,75,80" Grid.Column="1" Grid.Row="1"/>
+        <StackPanel Grid.Column="1"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal"
+            Width="225"
+            Margin="75">
+            <Button Width="100" Margin="0, 0, 25, 0">Cancel</Button>
+            <Button Width="100" Margin="0, 0, 0, 0">OK</Button>
+        </StackPanel>
+
     </Grid>
 </Window>
